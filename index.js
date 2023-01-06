@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const TodoTask = require("./models/TodoTask");
 const { compileETag } = require("express/lib/utils");
-
+mongoose.set('strictQuery', true);
 dotenv.config();
 app.use("/static", express.static("public"));
 app.use(express.urlencoded({ extended: true }));
