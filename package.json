@@ -4,11 +4,7 @@
   "description": "semestral project ",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "start": "./index.js"
-=======
     "start": "node index.js"
->>>>>>> e1ca72ae28764c66cb2533af02bae20c81259f78
   },
   "author": "Matej Pechout",
   "license": "ISC",
