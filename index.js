@@ -4,7 +4,8 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const TodoTask = require("./models/TodoTask");
 const { compileETag } = require("express/lib/utils");
-
+const PORT = process.env.PORT || 3000
+mongoose.set('strictQuery', true);
 dotenv.config();
 app.use("/static", express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -14,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
     console.log("Connected to db!");
-    app.listen(3000, () => console.log("Server Up and running"));
+    app.listen(PORT, () => console.log("Server Up and running", PORT));
 });
 
 app.set("view engine", "ejs");
