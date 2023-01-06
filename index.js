@@ -4,7 +4,10 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const TodoTask = require("./models/TodoTask");
 const { compileETag } = require("express/lib/utils");
+<<<<<<< HEAD
 const PORT = process.env.PORT || 3000
+=======
+>>>>>>> e1ca72ae28764c66cb2533af02bae20c81259f78
 mongoose.set('strictQuery', true);
 dotenv.config();
 app.use("/static", express.static("public"));
